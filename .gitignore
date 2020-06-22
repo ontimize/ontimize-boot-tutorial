@@ -92,7 +92,8 @@ local.properties
 
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
-#.project
+.project
+.classpath
 
 ### Eclipse Patch ###
 # Spring Boot Tooling
@@ -220,3 +221,7 @@ buildNumber.properties
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/maven,eclipse,angular,intellij,visualstudiocode
+
+model/src/main/db/templateDB.lck
+model/src/main/db/templateDB.log
+model/src/main/db/templateDB.properties
