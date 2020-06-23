@@ -1043,6 +1043,126 @@
 							"response": []
 						},
 						{
+							"name": "offer status -R (Basic Expression)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\": {\n        \"@basic_expression\": {\n            \"lop\": \"START_DATE\",\n            \"op\": \">=\",\n            \"rop\": \"2020-01-15\"\n        }\n    },\n    \"columns\": [\n        \"ID\",\n        \"DESCRIPTION\",\n        \"OFFER_STATUS\",\n        \"END_DATE\",\n        \"APPLICANT\",\n        \"ACRONYM\",\n        \"CREATION_DATE\",\n        \"START_DATE\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/offers/offer/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"offers",
+										"offer",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "offer status -R (Complex Basic Expression)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\": {\n        \"@basic_expression\": {\n            \"lop\": {\n                \"lop\": \"START_DATE\",\n                \"op\": \">=\",\n                \"rop\": \"2019-06-01\"\n            },\n            \"op\": \"AND\",\n            \"rop\": {\n                \"lop\": \"START_DATE\",\n                \"op\": \"<\",\n                \"rop\": \"2020-01-01\"\n            }\n        }\n    },\n    \"columns\": [\n        \"ID\",\n        \"DESCRIPTION\",\n        \"OFFER_STATUS\",\n        \"END_DATE\",\n        \"APPLICANT\",\n        \"ACRONYM\",\n        \"CREATION_DATE\",\n        \"START_DATE\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/offers/offer/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"offers",
+										"offer",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "offer status -R (REST Basic Expression - Current)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"columns\": [\n        \"ID\",\n        \"DESCRIPTION\",\n        \"OFFER_STATUS\",\n        \"END_DATE\",\n        \"APPLICANT\",\n        \"ACRONYM\",\n        \"CREATION_DATE\",\n        \"START_DATE\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/offers/currentOffers/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"offers",
+										"currentOffers",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "offer status -R (REST Basic Expression - FilterYear)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\": {\n        \"YEAR\": 2019\n    },\n    \"columns\": [\n        \"ID\",\n        \"DESCRIPTION\",\n        \"OFFER_STATUS\",\n        \"END_DATE\",\n        \"APPLICANT\",\n        \"ACRONYM\",\n        \"CREATION_DATE\",\n        \"START_DATE\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/offers/yearOffers/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"offers",
+										"yearOffers",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "offer status -U",
 							"request": {
 								"method": "PUT",
