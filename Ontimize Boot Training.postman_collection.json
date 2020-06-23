@@ -228,6 +228,762 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Masters",
+			"item": [
+				{
+					"name": "Education",
+					"item": [
+						{
+							"name": "education -C",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"DESCRIPTION\": \"Degree in TSE\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/education",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"education"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "education -R",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:33333/master/education?columns=ID,DESCRIPTION",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"education"
+									],
+									"query": [
+										{
+											"key": "columns",
+											"value": "ID,DESCRIPTION"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "education -R (complex)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"filter\": {\n\t\t\"ID\": 0\n\t},\n\t\"columns\": [\"DESCRIPTION\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/education/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"education",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "education -U",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\":{\n    \t\"ID\":\t1\n    },\n    \"data\": {\n        \"DESCRIPTION\": \"Degree in Telecommunications Systems Engineering\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/education",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"education"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "education -D",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\":{\n    \t\"ID\":\t1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/education",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"education"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Experience Level",
+					"item": [
+						{
+							"name": "experienceLevel -C",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"DESCRIPTION\": \"Experienced\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/experienceLevel",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"experienceLevel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "experienceLevel -R",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:33333/master/experienceLevel?columns=ID,DESCRIPTION",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"experienceLevel"
+									],
+									"query": [
+										{
+											"key": "columns",
+											"value": "ID,DESCRIPTION"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "experienceLevel -R (complex)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"filter\": {\n\t\t\"ID\": 0\n\t},\n\t\"columns\": [\"DESCRIPTION\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/experienceLevel/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"experienceLevel",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "experienceLevel -U",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\": {\n        \"ID\": 1\n    },\n    \"data\": {\n        \"DESCRIPTION\": \"Senior\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/experienceLevel",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"experienceLevel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "experienceLevel -D",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\":{\n    \t\"ID\":\t1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/experienceLevel",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"experienceLevel"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Origin",
+					"item": [
+						{
+							"name": "origin -C",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"DESCRIPTION\": \"Web\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/origin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"origin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "origin -R",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:33333/master/origin?columns=ID,DESCRIPTION",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"origin"
+									],
+									"query": [
+										{
+											"key": "columns",
+											"value": "ID,DESCRIPTION"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "origin -R (complex)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"filter\": {\n\t\t\"ID\": 0\n\t},\n\t\"columns\": [\"DESCRIPTION\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/origin/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"origin",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "origin -U",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\": {\n        \"ID\": 1\n    },\n    \"data\": {\n        \"DESCRIPTION\": \"LinkedIn\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/origin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"origin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "origin -D",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\":{\n    \t\"ID\":\t1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/origin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"origin"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "profile -C",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"DESCRIPTION\": \"HR\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "profile -R",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:33333/master/profile?columns=ID,DESCRIPTION",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"profile"
+									],
+									"query": [
+										{
+											"key": "columns",
+											"value": "ID,DESCRIPTION"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "profile -R (complex)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"filter\": {\n\t\t\"ID\": 0\n\t},\n\t\"columns\": [\"DESCRIPTION\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/profile/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"profile",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "profile -U",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\": {\n        \"ID\": 1\n    },\n    \"data\": {\n        \"DESCRIPTION\": \"Human Resources\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "profile -D",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\":{\n    \t\"ID\":\t1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Status",
+					"item": [
+						{
+							"name": "status -C",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"DESCRIPTION\": \"No Available\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status -R",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:33333/master/status?columns=ID,DESCRIPTION",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"status"
+									],
+									"query": [
+										{
+											"key": "columns",
+											"value": "ID,DESCRIPTION"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status -R (complex)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"filter\": {\n\t\t\"ID\": 0\n\t},\n\t\"columns\": [\"DESCRIPTION\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/status/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"status",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status -U",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\": {\n        \"ID\": 1\n    },\n    \"data\": {\n        \"DESCRIPTION\": \"Unavailable\"\n    },\n    \"sqltypes\": {\n        \"DESCRIPTION\": 12\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status -D",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\":{\n    \t\"ID\":\t1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/master/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"master",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"auth": {
