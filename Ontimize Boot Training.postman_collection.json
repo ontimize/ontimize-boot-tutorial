@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "66b8d05b-4d9c-4acc-81bf-82fd5c095ce1",
+		"_postman_id": "aa064168-a723-4551-a42a-26f4c0063ca4",
 		"name": "Ontimize Boot Training",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -946,7 +946,7 @@
 					"name": "Offer",
 					"item": [
 						{
-							"name": "offer status -C",
+							"name": "offer -C",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -975,7 +975,7 @@
 							"response": []
 						},
 						{
-							"name": "offer status-R",
+							"name": "offer -R",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1013,7 +1013,7 @@
 							"response": []
 						},
 						{
-							"name": "offer status -R (Complex)",
+							"name": "offer -R (Complex)",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -1043,7 +1043,7 @@
 							"response": []
 						},
 						{
-							"name": "offer status -R (Basic Expression)",
+							"name": "offer -R (Basic Expression)",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -1073,7 +1073,7 @@
 							"response": []
 						},
 						{
-							"name": "offer status -R (Complex Basic Expression)",
+							"name": "offer -R (Complex Basic Expression)",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -1103,7 +1103,7 @@
 							"response": []
 						},
 						{
-							"name": "offer status -R (REST Basic Expression - Current)",
+							"name": "offer -R (REST Basic Expression - Current)",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -1133,7 +1133,7 @@
 							"response": []
 						},
 						{
-							"name": "offer status -R (REST Basic Expression - FilterYear)",
+							"name": "offer -R (REST Basic Expression - FilterYear)",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -1163,7 +1163,7 @@
 							"response": []
 						},
 						{
-							"name": "offer status -U",
+							"name": "offer -U",
 							"request": {
 								"method": "PUT",
 								"header": [],
@@ -1192,7 +1192,7 @@
 							"response": []
 						},
 						{
-							"name": "offer status -D",
+							"name": "offer -D",
 							"request": {
 								"method": "DELETE",
 								"header": [],
@@ -1487,6 +1487,36 @@
 							"response": []
 						},
 						{
+							"name": "offer candidate -R (Details)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\": {\n    \t\"ID\": 0\n    },\n    \"columns\": [\"ID\",\"DESCRIPTION\",\"OFFER_STATUS\",\"END_DATE\",\"APPLICANT\",\"ACRONYM\",\"CREATION_DATE\",\"START_DATE\",\"NAME\",\"SURNAME\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:33333/offers/offerCandidateDetails/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33333",
+									"path": [
+										"offers",
+										"offerCandidateDetails",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "offer candidate -U",
 							"request": {
 								"method": "PUT",
@@ -1549,7 +1579,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "6bd9c516-af63-446b-966e-e5a203013215",
+								"id": "11ecf888-72e5-4228-b9f5-1c2fc78b6a94",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1559,7 +1589,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "33e79744-9761-48f9-8a78-9aa908f9a3ea",
+								"id": "502d90b1-22e9-4426-8b62-9a37f7cfcda7",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1733,7 +1763,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "71ed2803-2464-4851-b017-89befc12a4ae",
+								"id": "d8f708c5-b635-4a34-a905-0fbfde0ce49e",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1743,7 +1773,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8232af92-b4d4-4bb0-a0b9-da02afea9de6",
+								"id": "cdd0f9d4-0cc5-412b-9571-83e52211fe5f",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1777,7 +1807,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "da23bd76-51cd-4551-be67-de10f86ae2cd",
+				"id": "523e4020-c1e5-458c-9538-b5bb6f0784ff",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1787,7 +1817,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e3e834ee-d7cc-4c03-bdf7-c38cabd4982b",
+				"id": "978f2bf4-7ab1-4f60-9cbb-c4a2de0ea2c1",
 				"type": "text/javascript",
 				"exec": [
 					""
