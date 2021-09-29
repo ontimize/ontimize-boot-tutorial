@@ -223,3 +223,5 @@ buildNumber.properties
 hr-model/src/main/db/templateDB.lck
 hr-model/src/main/db/templateDB.log
 hr-model/src/main/db/templateDB.script
+*.classpath
+*.project
