@@ -61,6 +61,24 @@ server:
       enabled: true
       mime-types: application/json, application/xml
 spring:
+   kafka:
+      bootstrap-servers: localhost:9092
+      consumer:
+         group-id: Combined Lag
+      factory:
+         enable: true
+         key-serializer: integer-serializer
+         value-serializer: string-serializer
+         key-deserializer: integer-deserializer
+         value-deserializer: string-deserializer
+         producers:
+            - name: candidate-productor
+              topics:
+                 - candidate-topics
+         consumers:
+            - name: offer-consumer
+              topics:
+                 - candidate-topics
    datasource:
       driver-class-name: org.hsqldb.jdbcDriver
       jdbc-url: jdbc:hsqldb:hsql://localhost:9013/templateDB
