@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 @RestController
 @RequestMapping("/candidates")
 @ComponentScan(basePackageClasses = {com.ontimize.hr.api.core.service.ICandidateService.class})
@@ -35,7 +37,7 @@ public class CandidateRestController extends ORestController<ICandidateService> 
     @RequestMapping(value = "/testSendKafka", method = RequestMethod.GET)
     public ResponseEntity<String> testSendKafka() {
         OntimizeKafkaProducer<Integer, String> producer = this.ontimizeKafkaFactory.getProducer("candidate-productor");
-        producer.sendMessage(1, "Hola!", new OntimizeKafkaProducerAction<Integer, String>() {
+        producer.sendMessage(1, String.valueOf(ThreadLocalRandom.current().nextInt(1,101)), new OntimizeKafkaProducerAction<Integer, String>() {
             @Override
             public void runOnSuccess(ProducerRecord<Integer, String> data) {
                 System.out.println("envío exitoso");

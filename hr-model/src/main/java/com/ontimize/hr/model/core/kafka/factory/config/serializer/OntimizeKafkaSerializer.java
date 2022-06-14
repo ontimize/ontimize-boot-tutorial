@@ -1,6 +1,7 @@
 package com.ontimize.hr.model.core.kafka.factory.config.serializer;
 
 
+import com.ontimize.hr.model.core.kafka.factory.config.serializer.custom.ObjectSerializer;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import io.confluent.kafka.serializers.json.KafkaJsonSchemaSerializer;
 import io.confluent.kafka.serializers.protobuf.KafkaProtobufSerializer;
@@ -8,6 +9,9 @@ import org.apache.kafka.common.serialization.*;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
 public enum OntimizeKafkaSerializer {
+    /** Property: "object-serializer" */
+    OBJECT_SERIALIZER(ObjectSerializer.class, "object-serializer"),
+
     /** Property: "string-serializer" */
     STRING_SERIALIZER(StringSerializer.class, "string-serializer"),
 

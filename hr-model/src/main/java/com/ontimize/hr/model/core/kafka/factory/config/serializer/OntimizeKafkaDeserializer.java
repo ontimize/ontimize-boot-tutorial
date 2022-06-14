@@ -1,5 +1,7 @@
 package com.ontimize.hr.model.core.kafka.factory.config.serializer;
 
+import com.ontimize.hr.model.core.kafka.factory.config.serializer.custom.ObjectDeserializer;
+import com.ontimize.hr.model.core.kafka.factory.config.serializer.custom.ObjectSerializer;
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;
 import io.confluent.kafka.serializers.json.KafkaJsonSchemaDeserializer;
 import io.confluent.kafka.serializers.protobuf.KafkaProtobufDeserializer;
@@ -7,6 +9,9 @@ import org.apache.kafka.common.serialization.*;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 
 public enum OntimizeKafkaDeserializer {
+    /** Property: "object-deserializer" */
+    OBJECT_DESERIALIZER(ObjectDeserializer.class, "object-deserializer"),
+
     /** Property: "string-deserializer" */
     STRING_DESERIALIZER(StringDeserializer.class, "string-deserializer"),
 
