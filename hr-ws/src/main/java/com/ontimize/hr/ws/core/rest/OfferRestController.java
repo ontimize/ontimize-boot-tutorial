@@ -71,7 +71,7 @@ public class OfferRestController extends ORestController<IOfferService> {
   }
  }
 
- private BasicExpression searchBetween(String param) {
+ public BasicExpression searchBetween(String param) {
 
   Calendar cal = Calendar.getInstance();
   int currentYear = cal.get(Calendar.YEAR);
@@ -79,7 +79,7 @@ public class OfferRestController extends ORestController<IOfferService> {
   return this.searchBetweenWithYear(param, currentYear);
  }
 
- private BasicExpression searchBetweenWithYear(String param, int year) {
+ public BasicExpression searchBetweenWithYear(String param, int year) {
 
   Calendar cal = Calendar.getInstance();
   cal.set(year, 0, 1);

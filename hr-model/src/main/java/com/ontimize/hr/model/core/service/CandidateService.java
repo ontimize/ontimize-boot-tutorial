@@ -104,7 +104,7 @@ public class CandidateService implements ICandidateService {
 	 * @return A {@link Map} with all of the keys and values removed from
 	 *         {@code attrMap}
 	 */
-	private Map<String, Object> removeNonRelatedData(Map<String, Object> attrMap, String... attrToExclude) {
+	public Map<String, Object> removeNonRelatedData(Map<String, Object> attrMap, String... attrToExclude) {
 		HashMap<String, Object> data = new HashMap<String, Object>();
 		for (String attr : attrToExclude) {
 			if (attrMap.containsKey(attr) && attrMap.get(attr) instanceof String) {
@@ -114,7 +114,7 @@ public class CandidateService implements ICandidateService {
 		return data;
 	}
 
-	private void insertNonRelatedData(Map<String, Object> nonCandidateData) {
+	public void insertNonRelatedData(Map<String, Object> nonCandidateData) {
 		for (Entry<String, Object> entry : nonCandidateData.entrySet()) {
 			Map<String, Object> data = new HashMap<String, Object>();
 			List<String> attr = new ArrayList<String>();
